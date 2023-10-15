@@ -9,6 +9,7 @@ import { SuccessComponent } from './success/success.component';
 import { WarningComponent } from './warning/warning.component';
 import { PropertyBindComponent } from './property-bind/property-bind.component';
 import { DataBindingAssignmentComponent } from './data-binding-assignment/data-binding-assignment.component';
+import { DisplayDetailsAssignmentComponent } from './display-details-assignment/display-details-assignment.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DataBindingAssignmentComponent } from './data-binding-assignment/data-b
     WarningComponent,
     PropertyBindComponent,
     DataBindingAssignmentComponent,
+    DisplayDetailsAssignmentComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

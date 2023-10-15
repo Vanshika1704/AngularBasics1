@@ -1,0 +1,16 @@
+<!-- <button (click)="showSecret = !showSecret">Display Details</button> -->
+<!-- 1. Add a button which says "display details"
+2. add a paragraph with any content
+3. toggle the displaying of that paragraph with the button created in the first step
+4. log all button clicks in an array and display it under the paragraph
+5. starting the 5th log item, make background color as blue and text color as white -->
+<button (click)="onToggleDetails()">Display Details</button>
+<p *ngIf="showSecret"> Secret Password: TUNA </p>
+<!-- <div *ngFor="let logItem of log" 
+[ngStyle]="{backgroundColor:logItem>=5?'blue':'transparent'}" 
+[ngClass]="{'white-text': logItem>=5}">{{ logItem }}</div> -->
+<p>using index from ngFor</p>
+<div *ngFor="let logItem of log; let i=index" 
+[ngStyle]="{backgroundColor:i>=4?'blue':'transparent'}" 
+[ngClass]="{'white-text': i>=4}">{{ logItem }}</div>
+
