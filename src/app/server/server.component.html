@@ -1,0 +1,5 @@
+<h2>String Interpolation example </h2>
+
+<p> The server with ID: {{serverID}} is {{serverStatus}}</p>
+<!-- or using a method -->
+<p [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online: serverStatus ==='online'}"> The server with ID: {{serverID}} is {{getServerStatus()}}</p>

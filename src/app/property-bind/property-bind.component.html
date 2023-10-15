@@ -1,0 +1,24 @@
+<!-- event binding -->
+<!-- <label>Server Name</label>
+<input type=text (input)="onUpdateServerName($event)"/>
+<p>{{ serverName }}</p> -->
+
+<p>2way data binding</p>
+<!-- import FormModule in app.module to use ngModel -->
+<label>Server Name2</label>
+<input type=text [(ngModel)]="serverName"/>
+<!-- <p>{{ serverName }}</p> -->
+
+<!-- property binding -->
+
+<button [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- square brackets indicate that the property is dynamically binded  -->
+<!-- <p>{{serverCreationStatus}}</p><hr> -->
+
+<!-- we only want to conditionally show Server created msg when a server is added:  -->
+<p>use of *ngIf directive</p>
+<p *ngIf="serverCreated; else noserver">Server was created. Name is {{ serverName }}</p>
+<ng-template #noserver>
+    <p>No server added!</p>
+</ng-template>
+<!-- <app-property-bind *ngFor="let server of servers"></app-property-bind> -->
